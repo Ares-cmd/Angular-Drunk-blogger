@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">Drunk blogger</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleCollapsed1()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText" [ngClass]="{'collapse': collapsed1, 'navbar-collapse': true}">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Article</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">posts</a>
+      </li>
+      <li>
+        <button class="btn btn-Success text-white" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"  (click)="getprofile()">
+          Profile
+        </button>
+      </li>
+      
+      <!-- <li class="nav-item" > 
+        <a class="nav-link"  style="cursor: pointer;">profile</a>
+      </li> -->
+    </ul>
+    <span class="navbar-text">
+      <strong> Welcome {{username}}</strong>
+    </span>
+  </div>
+</nav>
+<div class=" w-50 collapse " id="collapseExample" [ngClass]="{'collapse': collapsed2}">
+  <div class="card card-body">
+    <p>Name:{{username}}</p>
+    <p>Email:{{userEmail}}</p>
+  </div>
+</div>

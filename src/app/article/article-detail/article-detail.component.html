@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{article.title}}</h1>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-success" (click)="addpost()">Add Post</button>
+            <button type="button" class="btn btn-outline-success" (click)="editarticle()">Edit Article</button>
+            <button type="button" class="btn btn-outline-success" (click)="deletearticle()">Delete Article</button>
+          </div>
+          <div class="alert alert-danger" *ngIf="message" >
+            <p>{{message }}</p>
+          </div>
+          <hr>
+    </div>
+    <app-post></app-post>
+
+
+</div>

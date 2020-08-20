@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-3">
+            <img class="card-img-top" src="../../../../assets/img/rsz_write.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">{{post.description}}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="javascript:void(0);" style="cursor: pointer;" class="card-link" (click)="comment()">comment</a>
+                <a href="javascript:void(0);" style="cursor: pointer;" class="card-link" (click)="deletepost()">delete post</a>
+                <div class="alert alert-danger" *ngIf="message" >
+                    <p>{{message }}</p>
+                </div>
+                
+
+
+                  <div class="row">
+                    <div class="col-12">
+                      <form #addpostform="ngForm" (ngSubmit)="onSubmit(addpostform)">
+                           
+                        <hr>
+                            <div class="form-group">
+                                <textarea
+                                  type="text"
+                                    placeholder="Comment here"
+                                  name="desc"
+                                  class="form-control"
+                                  rows="3"
+                                  ngModel ></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-success mx-2">Save</button>
+                      </form>
+                    </div>
+                  </div>
+                  
+                  <app-comment></app-comment>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>

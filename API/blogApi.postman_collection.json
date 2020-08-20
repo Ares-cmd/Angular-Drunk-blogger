@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "f176bf14-b4fa-42ff-b14d-72b486dc32cc",
+		"name": "blogApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"ankitgupta@gmail.com\",\n\t\"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}user/login",
+					"host": [
+						"{{blogApi}}user"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"ankit gupta\",\n\t\"email\": \"ankitgupta1@gmail.com\",\n\t\"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}user/register",
+					"host": [
+						"{{blogApi}}user"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArticles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4NTg0NzcwOX0.YYmO3y19jLxZwv5LgSe0qT2tHRY0JljHJcOo7PbZ4z0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"offset\": 0,\n\t\"limit\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}article/get-articles",
+					"host": [
+						"{{blogApi}}article"
+					],
+					"path": [
+						"get-articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteArticles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1cHRhQGdtYWlsLmNvbSIsImlkIjoyLCJuYW1lIjoiR3VwdGEiLCJpYXQiOjE1ODAzNzk4MDV9.-K0N54toftWuNFRvH6syzuIQIHVu20Ma8yD4Dm1PXDY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}article/delete-article",
+					"host": [
+						"{{blogApi}}article"
+					],
+					"path": [
+						"delete-article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4NTg0NzcwOX0.YYmO3y19jLxZwv5LgSe0qT2tHRY0JljHJcOo7PbZ4z0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 0,\n\t\"title\": \"facebook effect\",\n\t\"article_id\": 1,\n\t\"description\": \"asdfghjklqwerty bnbnbnb  bnbnb bnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbnbnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbnnbnbn bnbnbn  avsvssvs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}post/add-post",
+					"host": [
+						"{{blogApi}}post"
+					],
+					"path": [
+						"add-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4MjA5MDM3NH0.WAITvzMKyogGh3-2jscBr_kPeC8S9ryfeiZz4CRih-s",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"offset\": 0,\n\t\"limit\": 10,\n\t\"article_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}post/get-posts",
+					"host": [
+						"{{blogApi}}post"
+					],
+					"path": [
+						"get-posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add edit article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4NTg0NzcwOX0.YYmO3y19jLxZwv5LgSe0qT2tHRY0JljHJcOo7PbZ4z0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 0,\n\t\"title\": \"first Article\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}article/add-edit-article",
+					"host": [
+						"{{blogApi}}article"
+					],
+					"path": [
+						"add-edit-article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletepost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1cHRhQGdtYWlsLmNvbSIsImlkIjoyLCJuYW1lIjoiR3VwdGEiLCJpYXQiOjE1ODAzNzk4MDV9.-K0N54toftWuNFRvH6syzuIQIHVu20Ma8yD4Dm1PXDY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}post/delete-post",
+					"host": [
+						"{{blogApi}}post"
+					],
+					"path": [
+						"delete-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcomment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4MjgwODExNX0.LCL3o-dna34ISJnUKgFINrEdLzwwAMdy7oiY8730xGo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post_id\": 1,\n\t\"desc\": \"first\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}comment/add-comment",
+					"host": [
+						"{{blogApi}}comment"
+					],
+					"path": [
+						"add-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewpost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4MjUzODAzNn0.AAkP9x1Zppwt5hywgduRE_3qbDLLJq6R1u_PZDkIAtU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}post/view-post",
+					"host": [
+						"{{blogApi}}post"
+					],
+					"path": [
+						"view-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcomment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4NTg0NzcwOX0.YYmO3y19jLxZwv5LgSe0qT2tHRY0JljHJcOo7PbZ4z0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{blogApi}}comment/get-comments",
+					"host": [
+						"{{blogApi}}comment"
+					],
+					"path": [
+						"get-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-profile ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "AuthorizationToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFua2l0Z3VwdGFAZ21haWwuY29tIiwiaWQiOjEsIm5hbWUiOiJhbmtpdCBndXB0YSIsImlhdCI6MTU4NjM1NTc3MH0.9NMC8BMdDOxsMUjRwoP0PsinU3j0LMfkyD4-KMRzn90",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{blogApi}}user/get-profile ",
+					"host": [
+						"{{blogApi}}user"
+					],
+					"path": [
+						"get-profile "
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
